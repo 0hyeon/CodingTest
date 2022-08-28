@@ -1,21 +1,42 @@
+//고객이 평행한 직사각형을 만들기 위해 3점을 선택한 후 네번째 점을 구하는데 고생하고있다.
+//고객을 도와 네번째 점을 구하는 함수를 만드시오.
+//입력값은 x좌표3개, y좌표 3개가 각각 배열로 입력되며, 네번째점 [x,y]를 산출하여 반환한다.
+
 //기본템플릿
 
 // user code
-function answer(num) {
-  let result = "";
+function answer(v) {
+  let result = [];
 
+  // if (x_arr[0] == x_arr[1]) result[0] = x_arr[2];
+  // else if (x_arr[0] == x_arr[2]) result[0] = x_arr[1];
+  // else if (x_arr[1] == x_arr[2]) result[0] = x_arr[0];
+
+  // if (y_arr[0] == y_arr[1]) result[1] = y_arr[2];
+  // else if (y_arr[0] == y_arr[2]) result[1] = y_arr[1];
+  // else if (y_arr[1] == y_arr[2]) result[1] = y_arr[0];
+
+  result[0] = v[0][0] ^ v[0][1] ^ v[0][2];
+  result[1] = v[1][0] ^ v[1][1] ^ v[1][2];
   return result;
 }
 
 //main code
 let input = [
-  //TC: 1
-  5,
-  //TC: 2
-  7,
-  //TC: 2
-  12,
+  [
+    [5, 5, 8],
+    [5, 8, 5],
+  ],
+  [
+    [3, 1, 1],
+    [2, 1, 2],
+  ],
+  [
+    [7, 7, 3],
+    [4, 1, 1],
+  ],
 ];
 for (let i = 0; i < input.length; i++) {
-  console.log(`#${i + i} ${answer(input[i])}`);
+  process.stdout.write(`#${i + 1} `);
+  console.log(answer(input[i]));
 }
