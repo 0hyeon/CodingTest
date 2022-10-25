@@ -10,7 +10,7 @@ function answer(x, y) {
     // y = t;
 
     [x, y] = [y, x];
-  }
+  } //큰쪽이 앞으로
   for (let i = x; i <= y; i++) {
     result.push(i);
   }

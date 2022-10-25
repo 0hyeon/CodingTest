@@ -6,12 +6,12 @@ function print_audd(x, y = 10) {
 // 1.default value
 print_audd(10, 20, 30); //30
 print_audd(10, 20); //30
-print_audd(10, 20); //20
+print_audd(10); //20
 print_audd(); //NaN
 
 //2. dynamic parameters
 function print_min() {
-  console.log((arguments[0] = arguments[1]));
+  console.log(arguments[0] - arguments[1]);
 }
 
 print_min(10, 20, 30); //-10

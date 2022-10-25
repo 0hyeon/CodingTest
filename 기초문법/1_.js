@@ -17,5 +17,5 @@ let input = [
   12,
 ];
 for (let i = 0; i < input.length; i++) {
-  console.log(`#${i + i} ${answer(input[i])}`);
+  console.log(`#${i} ${answer(input[i])}`);
 }
