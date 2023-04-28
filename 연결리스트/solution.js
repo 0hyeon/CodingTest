@@ -12,6 +12,7 @@ class singlyLinkedList {
   find(value) {
     let curnNode = this.head;
     while (curnNode.value !== value) {
+      //head가 null이 아닌경우 진행
       curnNode = curnNode.next;
     }
     console.log(curnNode);
@@ -54,9 +55,7 @@ class singlyLinkedList {
     console.log(displayString);
   }
 }
-
 const linkedList = new singlyLinkedList();
-
 linkedList.append(1);
 linkedList.append(2);
 linkedList.append(3);
