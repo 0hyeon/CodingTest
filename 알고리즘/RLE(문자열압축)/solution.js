@@ -1,16 +1,18 @@
 function compress(s, n) {
+  //문자열압축함수
   let result = "";
   let count = 1;
-  let prev = s.slice(0, n);
+  let prev = s.slice(0, n); //비교문자열
 
   for (let i = n; i <= s.length; i += n) {
-    const current = s.slice(i, i + n);
+    const current = s.slice(i, i + n); //비교할문자열 (갱신화되어서 밑에서 담으면안됨 담을땐prev써야) , n이아니고 i
     if (prev === current) {
-      count++;
+      count++; //+1스택을쌓는다
     } else {
-      result += count > 1 ? count + prev : prev;
-      count = 1;
-      prev = current;
+      //다른문자일경우
+      result += count > 1 ? count + prev : prev; //수확 ?current + prev는 현재 압축하려는 문자열이 아직 압축되지 않았기 때문에 nope
+      count = 1; //1로초기화
+      prev = current; //비교문자열 최신화
     }
   }
   result += count > 1 ? count + prev : prev;
@@ -20,7 +22,7 @@ function solution(s) {
   let min = s.length;
   for (let i = 1; i <= Math.floor(s.length / 2); i++) {
     const compressed = compress(s, i);
-    min = Math.min(min, compressed.length);
+    min = Math.min(min, compressed.length); //compressed 아닌 .length이어야
   }
   return min;
 }
