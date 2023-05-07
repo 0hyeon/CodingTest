@@ -23,7 +23,7 @@ function answer(employee) {
 //main code
 let input = [
   //TC: 1
-  [3, 7, 9, 6, 1],
+  [3, 7, 9, 6, 1], //해당지점 직원들의 판매목록 5명이 각각 판매한목록
   //TC: 2
   [2, 7, 1, 4, 3, 0, 5],
   //TC: 2
