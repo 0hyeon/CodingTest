@@ -3,7 +3,7 @@
 // user code
 function answer(x, y) {
   let result = "";
-  result += x < y ? x : y;
+  result = x < y ? x : y;
   return result;
 }
 

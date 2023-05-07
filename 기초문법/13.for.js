@@ -2,7 +2,7 @@
 // 1.for in 문
 //객체의 키 key,value형태를 반복해서 수행하는데 최적화 된유형
 // 첫번째부터 마지막까지, 객체의 키 개수만큼 반복
-
+//for...in은 객체의 반복에서 사용된다.
 //Syntax
 // for (key in object) {
 //   //code block to be executed
@@ -20,7 +20,7 @@ console.log(text);
 // es6에 새로추가된 컬렉션 기반의 반복구문
 // Syntax
 // for (variable of iterator) {
-
+//for...of 는 배열의 반복에서 사용되고/
 // }
 
 // ex
