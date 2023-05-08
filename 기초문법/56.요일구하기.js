@@ -13,10 +13,10 @@ function answer(str) {
   let day;
 
   let date = new Date(str);
-  //   console.log("date", date); //2021-01-27T00:00:00.000Z
+  console.log("date", date); //2021-01-27T00:00:00.000Z
 
   day = week[date.getDay()];
-  //   console.log("date.getDay()", date.getDay()); //3
+  console.log("date.getDay()", date.getDay()); //3
 
   //   console.log("week[date.getDay()]", week[date.getDay()]); //수요일 week[3]
   return day;
