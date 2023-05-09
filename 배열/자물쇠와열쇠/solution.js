@@ -19,7 +19,6 @@ function solution(key, lock) {
 
   // m 변수: 열쇠의 길이를 저장합니다.
   const m = key.length;
-  console.log(m);
   // 첫 번째 for 루프 (rN): 열쇠를 시계 방향으로 회전시키는 과정을 4번 반복합니다.
   for (let rN = 0; rN < 4; rN++) {
     // if 문 (rN > 0): 첫 번째 회전이 아닌 경우, 열쇠를 시계 방향으로 90도 회전시킵니다.
@@ -34,7 +33,6 @@ function solution(key, lock) {
             [...pad(vN), ...row.slice(0, m - vN)]
           : [...row.slice(-m - vN), ...pad(Math.abs(vN))]
       );
-      console.log("vKey : ", vKey);
       // 세 번째 for 루프 (hN): 열쇠를 좌우로 움직입니다.
       for (let hN = -m + 1; hN <= m - 1; hN++) {
         // hKey 변수: 좌우로 움직인 열쇠를 저장합니다.
@@ -42,7 +40,6 @@ function solution(key, lock) {
           hN >= 0
             ? [...vKey.slice(-m + hN), ...pad(hN, pad(m))]
             : [...pad(Math.abs(hN), pad(m)), ...vKey.slice(0, m + hN)];
-        console.log("hKey :", hKey);
         // if 문 (lock.every(...)): 자물쇠의 모든 홈이 열쇠와 정확하게 맞물리면 true를 반환하고 함수를 종료합니다.
         if (lock.every((row, i) => row.every((n, j) => n + hKey[i][j] === 1)))
           return true;
