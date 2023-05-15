@@ -11,7 +11,7 @@ class singlyLinkedList {
   }
   find(value) {
     let curnNode = this.head;
-    while (curnNode.value !== value) {
+    while (curnNode !== null && curnNode.value !== value) {
       //head가 null이 아닌경우 진행
       curnNode = curnNode.next;
     }
