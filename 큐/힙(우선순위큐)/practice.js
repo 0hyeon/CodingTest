@@ -17,6 +17,7 @@ class MaxHeap {
       //위치조정후 루트정점이랑 비교후 다시 반복문
     }
   }
+  pop() {}
 }
 
 const heap = new MaxHeap();
