@@ -45,9 +45,30 @@ function solution(priorities, location) {
   while (true) {
     const currentValue = queue.peek();
     if (currentValue[0] < priorities[count]) {
+      //카운터가 늘어날수록 계속 같아지게 되어서 location이 맞을때까지 계속 반복
+      //count도 늘어나고 큐도 디큐로 앞에가 계속 빠지게 된다.
       queue.enqueue(queue.dequeue());
     } else {
       const value = queue.dequeue();
+      count += 1;
+      if (location === value[1]) {
+        return count;
+      }
+    }
+  }
+}
+
+//2
+function solution(priorities, location) {
+  const queue = priorities.map((value, index) => [value, index]);
+  priorities.sort((a, b) => b - a);
+  let count = 0;
+  while (true) {
+    const currentValue = queue[0];
+    if (currentValue[0] < priorities[count]) {
+      queue.push(queue.shift());
+    } else {
+      const value = queue.shift();
       count += 1;
       if (location === value[1]) {
         return count;
