@@ -4,9 +4,8 @@
 
 function Answer(str) {
   result = "";
-
   //1. 소문자로 변환
-  str = str.toLowerCase();
+  result = str.toLowerCase();
   //console.log(str);
 
   //2. advert단어가 매일 제목내 포함되는지 판단할경우

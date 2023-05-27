@@ -5,8 +5,11 @@ function answer(arr) {
   reverse = [];
 
   for (let i = arr.length - 1; i >= 0; i--) {
+    //for문을 역으로
     reverse.push(arr[i]);
   }
+
+  //reverse = arr.reverse();
 
   return reverse;
 }
