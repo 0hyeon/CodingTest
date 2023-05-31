@@ -28,7 +28,7 @@ class Queue {
     return value;
   }
   peek() {
-    //head의 값을 반환 peek() 메서드를 호출하면 1을 반환하게 됩니다. 이때, Queue는 여전히 [1, 2, 3] 상태를 유지합니다.
+    //head의 값을 반환 peek() 메서드를 호출하면 1을 반환 이때, Queue는 여전히 [1, 2, 3] 상태를 유지
     return this.head.value;
   }
 }
