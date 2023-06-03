@@ -57,11 +57,10 @@ class singlyLinkedList {
 }
 const linkedList = new singlyLinkedList();
 linkedList.append(1);
-linkedList.append(2);
 linkedList.append(3);
 linkedList.append(4);
-linkedList.append(5);
-linkedList.append(6);
+linkedList.append(18);
+linkedList.append(19);
 
 class Node {
   constructor(value) {
@@ -96,15 +95,24 @@ function deleteEven(head) {
     }
     curr = curr.next;
   }
-
+  //oddHead :  Node {
+  //     value: 1,
+  //     next: Node { value: 3, next: Node { value: 19, next: null } }
+  //   }
   return oddHead; // 홀수 값을 가지는 노드들로 이루어진 새로운 연결 리스트의 헤드 노드를 반환합니다.
 }
 
 // deleteEven 함수 호출
+// Node1 {value: 1,next: Node1 { value: 3, next: Node1 { value: 4, next: [Node1] } }}
 const result = deleteEven(linkedList.find(1));
 
 // 홀수 값 출력
 let currNode = result;
+console.log("currNode : ", currNode);
+//currNode :  Node {
+//     value: 1,
+//     next: Node { value: 3, next: Node { value: 19, next: null } }
+//   }
 while (currNode !== null) {
   console.log(currNode.value);
   currNode = currNode.next;
