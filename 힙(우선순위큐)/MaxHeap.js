@@ -24,7 +24,7 @@ class MaxHeap {
   //삭제로직
   pop() {
     const returnValue = this.heap[1]; //정점
-    this.heap[1] = this.heap.pop(); //마지막을 제일위로 올림
+    this.heap[1] = this.heap.pop(); //마지막을 제일위로 올림 첫번째 정점을 다시 찾으려는 목적으로 재정렬하기 위해 맨마지막 노드를 정점으로 올려서 재정렬 하려하기 위한 단계
 
     let currentIndex = 1;
     let leftIndex = 2;
@@ -64,8 +64,8 @@ heap.push(63);
 console.log(heap.heap);
 //pop
 const array = [];
-array.push(heap.pop());
-array.push(heap.pop());
+array.push(heap.pop()); //63 제일큰값
+array.push(heap.pop()); //54
 array.push(heap.pop());
 array.push(heap.pop());
 array.push(heap.pop());
