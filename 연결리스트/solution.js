@@ -21,6 +21,7 @@ class singlyLinkedList {
   append(newValue) {
     const newNode = new Node(newValue);
     if (this.head === null) {
+      //처음일경우
       this.head = newNode;
       this.tail = newNode;
     } else {

@@ -1,15 +1,32 @@
-function hasDuplicateValue(array) {
-  let steps = 0;
-  let existingNumbers = [];
-  for (let i = 0; i < array.length; i++) {
-    steps++;
-    if (existingNumbers[array[i]] === undefined) {
-      existingNumbers[array[i]] = 1;
+class Node1 {
+  constructor(value) {
+    this.value = value;
+    this.next = tail;
+  }
+}
+class singlyLinkedList {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+  }
+  append(newValue) {
+    const newNode = new Node(newValue);
+    if (this.head == null) {
+      this.head = newNode;
+      this.tail = newNode;
     } else {
-      return true;
+      this.tail.next = newNode;
+      this.tail = newNode; //tail.next도 가리켜야하고, tail등록 해야하는데 순서가 반대로되면 잘못된 로직.    }
     }
   }
-  console.log(steps);
-  return false;
+  display() {
+    let curnNode = this.head;
+    let displayString = "["; //여기다가 string을 더할예정
+
+    while (curnNode !== null) {
+      let curnNode = this.head;
+      displayString += `${curnNode.value},`;
+      curnNode = curnNode.next;
+    }
+  }
 }
-hasDuplicateValue([1, 2, 3, 4]);
